@@ -3,71 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Countdown to IKKA TREVOR BIG DAY</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-        font-family: "Arial", sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        color: white;
-        overflow: hidden;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 30px;
-        text-align: center;
-        animation: glow 2s ease-in-out infinite alternate;
-      }
-
-      @keyframes glow {
-        from {
-          text-shadow: 0 0 10px #00ffff;
-        }
-        to {
-          text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
-        }
-      }
-
-      .countdown {
-        display: flex;
-        gap: 20px;
-      }
-
-      .time-box {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 20px 30px;
-        border-radius: 10px;
-        text-align: center;
-        animation: bounce 2s infinite;
-      }
-
-      .time-box span {
-        display: block;
-        font-size: 2.5rem;
-        font-weight: bold;
-      }
-
-      .label {
-        font-size: 1rem;
-        opacity: 0.7;
-      }
-
-      @keyframes bounce {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Countdown to IKKA TREVOR BIG DAY</h1>
@@ -91,32 +27,6 @@
       </div>
     </div>
 
-    <script>
-      // Set target date (change this to the actual birthday)
-      const birthday = new Date("2025-04-14T00:00:00").getTime();
-
-      const updateCountdown = () => {
-        const now = new Date().getTime();
-        const gap = birthday - now;
-
-        const second = 1000;
-        const minute = second * 60;
-        const hour = minute * 60;
-        const day = hour * 24;
-
-        const d = Math.floor(gap / day);
-        const h = Math.floor((gap % day) / hour);
-        const m = Math.floor((gap % hour) / minute);
-        const s = Math.floor((gap % minute) / second);
-
-        document.getElementById("days").innerText = d;
-        document.getElementById("hours").innerText = h;
-        document.getElementById("minutes").innerText = m;
-        document.getElementById("seconds").innerText = s;
-      };
-
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
