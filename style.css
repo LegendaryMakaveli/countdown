@@ -1,14 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  font-family: "Arial", sans-serif;
+  background: linear-gradient(to right, #080a0b, #0b1012, #01141c);
+  font-family: "Times New Roman", Times, serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  color: white;
+  color: rgba(9, 0, 0, 0.42);
   overflow: hidden;
 }
 
@@ -21,10 +21,10 @@ h1 {
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #00ffff;
+    text-shadow: 0 0 10px #ff0004;
   }
   to {
-    text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+    text-shadow: 0 0 20px #fd0505, 0 0 30px #f8060a;
   }
 }
 
@@ -34,7 +34,8 @@ h1 {
 }
 
 .time-box {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(252, 3, 3, 0.952);
+  color: rgb(235, 232, 232);
   padding: 20px 30px;
   border-radius: 10px;
   text-align: center;
